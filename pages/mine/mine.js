@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imgPath:''
+  },
 
+
+  btnClick() {
+    // console.log('点击')
+    wx.chooseImage({
+      success:(res) => {
+        console.log(res),
+        this.setData({
+         imgPath:  res.tempFilePaths[0]
+        })
+      }
+    })
   },
 
   /**
@@ -56,6 +69,7 @@ Page({
   onReachBottom: function () {
 
   },
+
 
   /**
    * 用户点击右上角分享

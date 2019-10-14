@@ -1,2 +1,6 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<text>pages/mine/mine.wxml</text>、
+
+<image src="{{imgPath}}"></image>
+
+<button bindtap="btnClick">选择</button>

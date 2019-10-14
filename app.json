@@ -1,16 +1,18 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/mine/mine"
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTitleText": "十万个创始人",
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "backgroundColor": "yellow",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "tabBar": {
     "selectedColor": "#ff5777",
@@ -19,6 +21,18 @@
       "text": "首页",
       "iconPath": "assets/tabbar/home.png",
       "selectedIconPath": "assets/tabbar/home_active.png"
+    },
+    {
+      "pagePath": "pages/category/category",
+      "text": "分类",
+      "iconPath": "/assets/tabbar/category.png",
+      "selectedIconPath": "/assets/tabbar/category_active.png"
+    },
+    {
+      "pagePath": "pages/cart/cart",
+      "text": "购物车",
+      "iconPath": "/assets/tabbar/cart.png",
+      "selectedIconPath": "/assets/tabbar/cart_active.png"
     },
     {
       "pagePath": "pages/mine/mine",
