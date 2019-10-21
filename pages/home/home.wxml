@@ -7,7 +7,7 @@
   <van-grid-item icon="{{item.image}}" text="{{item.title}}" wx:for="{{recommends}}" class="grid-item"/>
 </van-grid> -->
 
-<van-grid column-num="{{recommends.length}}" border="{{ false }}" class="grid-view">
+<van-grid column-num="{{recommends.length}}" border="{{ false }}" class="grid-view {{isfixed ? 'is-fixed' : ''}}" >
  
   <!-- <van-grid-item icon="{{item.image}}" text="{{item.title}}" wx:for="{{recommends}}" /> -->
 
@@ -44,8 +44,8 @@
 </van-tabs>
 
 <!-- 5.展示商品数据 -->
-<view class="goods-box">
-<block wx:for="{{goods[currentType].list}}" wx:key="item" >
-<w-goods-item item="{{item}}" class="item"></w-goods-item>
-</block>
-</view>
+<w-goods goods="{{goods[currentType].list}}"/>
+
+<!-- 6.回到顶部 -->
+<!-- hidden: hidden属于对于自定义的组件是无效 -->
+<w-back-top wx:if="{{showBackTop}}"/>

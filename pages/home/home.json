@@ -8,7 +8,8 @@
     "van-tab": "../../miniprogram_npm/vant-weapp/tab/index",
     "van-tabs": "../../miniprogram_npm/vant-weapp/tabs/index",
     "w-recommend": "./child/w-recommend/w-recommend",
-    "w-goods-item": "/components/w-goods-item/w-goods-item"
+    "w-goods": "/components/w-goods/w-goods",
+    "w-back-top": "/components/w-back-top/w-back-top"
   },
   "backgroundColor": "white"
 }

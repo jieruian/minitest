@@ -6,7 +6,7 @@ import {
   getMultiData,
   getGoodsData
 } from '../../service/home.js'
- 
+const TOP_DISTANCE = 1000;
 Page({
 
   /**
@@ -23,6 +23,8 @@ Page({
       sell: { page: 0, list: [] }
     },
     currentType: 'pop',
+    isfixed: false,
+    showBackTop: false,
   },
   /**
    * 生命周期函数--监听页面加载
@@ -108,7 +110,22 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
+     
+  },
 
+  onPageScroll(options) {
+    console.log(options.scrollTop)
+    // 1.取出scrollTop
+    const scrollTop = options.scrollTop;
+
+    // 2.修改showBackTop属性
+    // 官方: 不要再滚动的函数回调中频繁的调用this.setData
+    const flag1 = scrollTop >= TOP_DISTANCE;
+    if (flag1 != this.data.showBackTop) {
+      this.setData({
+        showBackTop: flag1
+      })
+    }
   },
 
   _getGoodsData(type) {

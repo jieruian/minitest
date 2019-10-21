@@ -1,0 +1,11 @@
+.goods-box {
+  margin-top: 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.goods-box .item {
+  width: 48%;
+  position: relative;
+}
