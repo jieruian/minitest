@@ -1,0 +1,29 @@
+/* pages/home/home.wxss */
+
+.grid-text {
+  padding: 10px;
+  font-size: 28rpx;
+  color: #666666;
+}
+.line-view {
+  background-color: #eee;
+  height: 8px;
+}
+image {
+  width: 100%
+}
+
+.tab-vant{
+  font-size: 20px;
+}
+
+.goods-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.goods-box .item {
+  width: 48%;
+  position: relative;
+}

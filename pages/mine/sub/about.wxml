@@ -1,0 +1,4 @@
+<!--pages/mine/sub/about.wxml-->
+<text>pages/mine/sub/about.wxml</text>
+<view></view>
+<button bindtap="sendMessageToLastPage">发送</button>

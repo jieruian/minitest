@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "banner-view": "/components/banner-view/banner-view",
+    "swiper-fit" : "/components/swiperFit/index",
+    "van-grid": "../../miniprogram_npm/vant-weapp/grid/index",
+    "van-grid-item": "../../miniprogram_npm/vant-weapp/grid-item/index",
+    "van-toast": "../../miniprogram_npm/vant-weapp/toast/index",
+    "van-tab": "../../miniprogram_npm/vant-weapp/tab/index",
+    "van-tabs": "../../miniprogram_npm/vant-weapp/tabs/index",
+    "w-recommend": "./child/w-recommend/w-recommend",
+    "w-goods-item": "/components/w-goods-item/w-goods-item"
+  },
+  "backgroundColor": "white"
+}

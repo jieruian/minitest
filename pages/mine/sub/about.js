@@ -1,56 +1,42 @@
-// pages/mine/mine.js
+// pages/mine/sub/about.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgPath:''
-  },
 
- jump(){
-   wx.navigateTo({
-     url: './sub/about',
-     events: {
-       // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-       acceptDataFromOpenedPage: function (data) {
-         console.log(data)
-       },
-       someEvent: function (data) {
-         console.log(data)
-       }
-  },
-     success: function (res) {
-       console.log('发送');
-       // 通过eventChannel向被打开页面传送数据
-       res.eventChannel.emit('lastPagesDatas', { data: '前面页面发送过来的数据' })
-     }
-   })
- },
-  btnClick() {
-    // console.log('点击')
-    wx.chooseImage({
-      success:(res) => {
-        console.log(res),
-        this.setData({
-         imgPath:  res.tempFilePaths[0]
-        })
-      }
-    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: '关于界面'
+    })
 
+    // console.log(option.query)
+    const eventChannel = this.getOpenerEventChannel()
+    // eventChannel.emit('acceptDataFromOpenedPage', { data: '发送给前一个界面' });
+    // eventChannel.emit('someEvent', { data: 'test' });
+    // 监听acceptDataFromOpenerPage事件，获取上一页面通过eventChannel传送到当前页面的数据
+    eventChannel.on('lastPagesDatas', function (data) {
+      console.log(data)
+    })
+  },
+  sendMessageToLastPage(){
+    const eventChannel = this.getOpenerEventChannel()
+    eventChannel.emit('acceptDataFromOpenedPage', { data: '发送给前一个界面' });
+    eventChannel.emit('someEvent', { data: 'test' });
+    wx.navigateBack({})
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
@@ -87,7 +73,6 @@ Page({
   onReachBottom: function () {
 
   },
-
 
   /**
    * 用户点击右上角分享

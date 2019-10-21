@@ -4,3 +4,4 @@
 <image src="{{imgPath}}"></image>
 
 <button bindtap="btnClick">选择</button>
+<button bindtap="jump">跳转</button>

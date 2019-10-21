@@ -1,0 +1,20 @@
+<!--components/w-tab-control.wxml-->
+<text>components/w-tab-control.wxml</text>
+<view>我是w-tab-control</view>
+
+<view class="tab-box">
+<!-- <block class="tab-box"> -->
+<view class="pop">流行</view>
+<view class="news">新款</view>
+<view class="feat">精选</view>
+<!-- </block> -->
+</view>
+<view>-------</view>
+<view class="new-box"> 
+<block wx:for="{{titles}}" wx:key="{{index}}">
+<view class="tab-item {{currentIndex == index ? 'active' : ''}}" bindtap="itemClick" data-index ="{{index}}">
+<text>{{item}}</text>
+</view>
+</block>
+</view>
+<view>当前计数：{{counter}}</view>

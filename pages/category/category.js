@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+     message:"<button>我是添加的按钮 </button>"
   },
 
   /**

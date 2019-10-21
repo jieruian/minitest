@@ -6,12 +6,32 @@ Page({
    */
   data: {
 
+    movies: ["哈哈1", "哈哈2", "哈哈3", "哈哈4", "哈哈4"],
+    maincounter: 0,
+
   },
 
   btnClick() {
     console.log('点击了vant按钮')
+
+    //获取组件对象
+    // const my_sel = this.selectComponent("#tab-self")
+    // console.log(my_sel);
+    //通过方法修改自定主键的数字
+    // my_sel.changConter(20)
+    wx.showToast({
+      title: '点击了vant按钮',
+    })
+    
+    this.setData({
+      maincounter: this.data.maincounter+20
+    })
   },
 
+  //点击tabcontrol的事件
+  handleTabClick(event) {
+   console.log(event.detail.index,event.detail.title)
+  },
   /**
    * 生命周期函数--监听页面加载
    */

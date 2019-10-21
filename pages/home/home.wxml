@@ -1,0 +1,51 @@
+<!--pages/home/home.wxml-->
+<van-toast id="van-toast" />
+<swiper-fit listimg="{{bannerImgList}}" id="swpierId"></swiper-fit>
+<!-- <banner-view lists="{{banners}}"></banner-view> -->
+
+<!-- <van-grid column-num="{{recommends.length}}">
+  <van-grid-item icon="{{item.image}}" text="{{item.title}}" wx:for="{{recommends}}" class="grid-item"/>
+</van-grid> -->
+
+<van-grid column-num="{{recommends.length}}" border="{{ false }}" class="grid-view">
+ 
+  <!-- <van-grid-item icon="{{item.image}}" text="{{item.title}}" wx:for="{{recommends}}" /> -->
+
+  <van-grid-item use-slot wx:for="{{recommends}}" wx:key="item" >
+    <image
+      style="width: 95%; height: 150rpx;"
+      src="{{item.image}}"
+    />
+    <text class="grid-text">{{item.title}}</text>
+  </van-grid-item>
+</van-grid>
+<view  class="line-view"></view>
+<!--  -->
+
+<!-- 3.展示本周流行 -->
+<view>
+<image src="/assets/home/popular_bg.jpg" mode='widthFix'/>
+</view>
+
+<!-- 4.tab-control -->
+<van-tabs  
+ active="{{ active }}" 
+ bind:change="onChange"
+  border="{{false}}" 
+  line-width="25" 
+  duration="0.15"
+  class="tab-vant"
+  color="#ff5777"
+  sticky="{{true}}" >
+
+ <van-tab title-style="font-size:36rpx;"
+  wx:for="{{titles}}" wx:key="{{item}}" 
+  title="{{item}}"></van-tab>
+</van-tabs>
+
+<!-- 5.展示商品数据 -->
+<view class="goods-box">
+<block wx:for="{{goods[currentType].list}}" wx:key="item" >
+<w-goods-item item="{{item}}" class="item"></w-goods-item>
+</block>
+</view>

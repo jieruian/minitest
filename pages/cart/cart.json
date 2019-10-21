@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-button": "../../miniprogram_npm/vant-weapp/button/index"
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "w-tab-control":"../../components/w-tab-control/w-tab-control"
   },
   "navigationBarTitleText": "购物车"
 }

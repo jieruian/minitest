@@ -1,0 +1,54 @@
+/* components/w-tab-control.wxss */
+.tab-box {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  /* align-items: center; */
+  height: 100rpx;
+  background-color: yellow;
+  /* vertical-align:middle; */
+  line-height: 100rpx;
+
+}
+
+.pop {
+  background-color: red;
+  width: 100rpx;
+  vertical-align:middle;
+}
+
+.news {
+  background-color: greenyellow;
+  width: 400rpx;
+}
+
+.feat {
+  background-color: purple;
+  width: 100rpx;
+}
+
+
+.new-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: yellow;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.tab-item {
+  flex: 1;
+}
+
+.active {
+ 
+  color: red;
+}
+
+.active text{
+   border-bottom: 2px solid red;
+   padding: 16rpx 10rpx;
+}
